@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* Reset + Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +7,23 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   background: #f4f4f4;
   color: #333;
+  overflow-x: hidden;
 }
 
-/* Container */
+/* Fade animation */
+.fade-container {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -32,17 +43,10 @@ header {
   align-items: center;
 }
 
-header .logo h1 {
-  margin-left: 20px;
-}
-
 header nav ul {
   list-style: none;
-}
-
-header nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 header nav ul li a {
@@ -53,21 +57,20 @@ header nav ul li a {
 
 /* Hero Section */
 #hero {
-  background: url('hero-bg.jpg') no-repeat center center/cover;
-  height: 400px;
-  display: flex;
-  align-items: center;
+  background: #1f1f1f;
   color: #fff;
   text-align: center;
-}
-
-.hero-container {
-  width: 100%;
+  padding: 80px 20px;
 }
 
 #hero h2 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ddd;
 }
 
 .btn {
@@ -75,31 +78,37 @@ header nav ul li a {
   background: #e8491d;
   color: #fff;
   padding: 10px 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   text-decoration: none;
   border-radius: 5px;
 }
 
-/* Sections */
-section {
-  padding: 40px 0;
+/* Script List */
+.script-list {
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style: disc;
 }
 
-/* Script Grid */
-.script-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+#fun {
+  background: #efefef;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.executor-box {
   margin-top: 20px;
 }
 
-.script-card {
-  background: #fff;
-  padding: 20px;
-  flex: 1 1 calc(33.333% - 20px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.executor-box input {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -111,18 +120,15 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media(max-width: 768px) {
-  .script-grid {
+  .header-container {
     flex-direction: column;
   }
-  
-  header .header-container {
+
+  header nav ul {
     flex-direction: column;
-  }
-  
-  header nav ul li {
-    display: block;
-    margin: 10px 0;
+    gap: 10px;
+    margin-top: 10px;
   }
 }
