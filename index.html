@@ -2,81 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZeScript Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <h1>ZeScript Hub</h1>
+  <div class="fade-container">
+
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <h1>ZeScript Hub</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#scripts">Scripts</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#scripts">Scripts</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+    </header>
+
+    <section id="hero">
+      <div class="container hero-container">
+        <h2>Welcome to ZeScript Hub</h2>
+        <p class="slogan">fast with less quality scripts</p>
+        <a href="#scripts" class="btn">Explore Scripts</a>
+      </div>
+    </section>
+
+    <section id="scripts">
+      <div class="container">
+        <h2>Supported Scripts</h2>
+        <ul class="script-list">
+          <li>The strongest battlegrounds (stopped updates)</li>
+          <li>Untitled tag game (stopped updates)</li>
+          <li>Randomizer (finished no need for updates)</li>
+          <li>Rivals (50% working)</li>
+          <li><em>and more to come!</em></li>
         </ul>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </section>
 
-  <section id="hero">
-    <div class="container hero-container">
-      <h2>Welcome to ZeScript Hub</h2>
-      <p>Your source for free Roblox scripts</p>
-      <a href="#scripts" class="btn">Explore Scripts</a>
-    </div>
-  </section>
-
-  <section id="scripts">
-    <div class="container">
-      <h2>Featured Scripts</h2>
-      <div class="script-grid">
-        <div class="script-card">
-          <h3>Script Name 1</h3>
-          <p>A brief description for script 1.</p>
-          <a href="#" class="btn">Download</a>
-        </div>
-        <div class="script-card">
-          <h3>Script Name 2</h3>
-          <p>A brief description for script 2.</p>
-          <a href="#" class="btn">Download</a>
-        </div>
-        <div class="script-card">
-          <h3>Script Name 3</h3>
-          <p>A brief description for script 3.</p>
-          <a href="#" class="btn">Download</a>
+    <section id="fun">
+      <div class="container">
+        <h2>Use our script hub and start having some fun!</h2>
+        <div class="executor-box">
+          <p>Copy this link into your executor:</p>
+          <input type="text" readonly value="loadstring(game:HttpGet('https://zescripthub.link/notdone.lua'))()" onclick="this.select();" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <h2>About ZeScript Hub</h2>
-      <p>
-        ZeScript Hub offers free Roblox scripts. We’re dedicated to providing accessible tools for the Roblox community. While our scripts are free, we continue to work on quality improvements.
-      </p>
-    </div>
-  </section>
+    <section id="about">
+      <div class="container">
+        <h2>About ZeScript Hub</h2>
+        <p>
+          ZeScript Hub offers free Roblox scripts. We’re dedicated to providing accessible tools for the Roblox community. While our scripts are free, we continue to work on quality improvements.
+        </p>
+      </div>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>
-        For inquiries or support, please email us at
-        <a href="mailto:contact@zescripthub.com">contact@zescripthub.com</a>.
-      </p>
-    </div>
-  </section>
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          For support, email us at 
+          <a href="mailto:contact@zescripthub.com">contact@zescripthub.com</a>
+        </p>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 ZeScript Hub. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 ZeScript Hub. All rights reserved.</p>
+      </div>
+    </footer>
+    
+  </div>
 
   <script src="script.js"></script>
 </body>
